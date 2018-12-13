@@ -1,7 +1,7 @@
 # AquaResp
 Automating Aquatic Respirometry. Focused on automating intermittent respirometry experiments for aquatic animals.
 
-See aquaresp.com for more information
+See <a href = "aquaresp.com">aquaresp.com for more information </a>
 
 The GUI and code controlling of the experiment, and the code calculating the results are licensed under Creative Commons BY-SA.
 
