@@ -303,7 +303,8 @@ def CleanSummaryData():
 	pf, slopefolder, expfolder = presentfolderFunc()
 	src = mainpath + "oxygen" + os.sep
 	dst = pf + "Oxygen data raw" + os.sep
-	
+	if not os.path.exists(dst):
+		os.makedirs(dst)
 	
 	for subdir, dirs, files in os.walk(libp):
 		for file in files:
