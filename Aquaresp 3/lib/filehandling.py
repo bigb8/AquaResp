@@ -2,6 +2,7 @@ import os,sys,shutil,time,datetime
 # import numpy as np
 mainpath = os.path.dirname(os.path.realpath(__file__)).split("lib")[0]
 temppath = mainpath + os.sep +"temp" + os.sep
+libp = mainpath + os.sep +"lib" + os.sep
 
 
 def presentfolderFunc():
@@ -303,9 +304,16 @@ def CleanSummaryData():
 	src = mainpath + "oxygen" + os.sep
 	dst = pf + "Oxygen data raw" + os.sep
 	
-	if not os.path.exists(dst):
-		os.makedirs(dst)
-		
+	
+	for subdir, dirs, files in os.walk(libp):
+		for file in files:
+			# print(os.path.join(subdir, file))
+			filepath = subdir + os.sep + file
+
+			if filepath.endswith(".html"):	
+				# print (filepath)
+				os.remove(filepath)
+
 		
 	for item in os.listdir(src):
 		s = os.path.join(src, item)
