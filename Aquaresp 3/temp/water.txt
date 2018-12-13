@@ -1,0 +1,3 @@
+Temperature:5;
+Salinity:30;
+Oxygen Solubility:10.524311018332698;

@@ -1,0 +1,102 @@
+
+
+body {
+  background: #35383d;/* match border color */
+  /*text-align: center;*/
+}
+
+
+
+.button_ref:hover {
+	opacity: 1
+	
+}
+
+.button_ref2:hover {
+	opacity: 1
+	
+}
+.button_ref22:hover {
+	opacity: 1
+	
+}
+
+.button_ref {
+    background-color:#f44336;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+	border-radius: 8px;
+	opacity: 0.6;
+}
+
+.button_ref22 {
+    background-color:#369b36;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+	border-radius: 8px;
+	opacity: 0.6;
+}
+
+
+
+
+.button_ref2 {
+    background-color:#3399ff;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+	border-radius: 8px;
+	opacity: 0.6;
+}
+
+.logo {
+  font: 50px 'Arial Narrow', sans-serif;/* I picked this font because it's the closest looking 'web safe' font http://cssfontstack.com/ */
+  /* color: #fefefe; */
+  text-transform: uppercase;
+  letter-spacing: -4px;
+  color: #49ed88;
+}
+
+.logo .versionname {
+color: #35383d;
+	
+}
+.versionname:hover {
+	
+	color: #000000;
+  -webkit-stroke-width: 5.3px;
+  -webkit-stroke-color: #FF00FF;
+  -webkit-fill-color: #FFFFFF;
+  text-shadow: 1px 0px 20px #ede449;
+  
+}
+
+@-webkit-keyframes shine {
+  from {
+    -webkit-mask-position: 150%;
+  }
+  
+  to {
+    -webkit-mask-position: -50%;
+  }
+}

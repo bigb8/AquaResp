@@ -1,0 +1,28 @@
+
+***********	*************	*************	**************	*************	*************	*************	*************	*************	*************	*************	*************	*************	*************
+Data	from	Pyro	Oxygen	Logger	V3.211	with	FireStingO2	(Firmware	3.07)	---	Pyro	Science	---	Device	Name:	
+***********	*************	*************	**************	*************	*************	*************	*************	*************	*************	*************	*************	*************	*************
+Settings:	Description	Units	Basic Mode	Sensor Code	Meas. Mode	Temp. Comp.	Temp. (°C)	Press. Comp.	Press. (hPa)	Salinity (‰)	LED Int. (%)	PD Ampl.	Meas. Time (ms)	Bkdg. Comp.	Fiber Length (m)	
+Ch 1	Oxygen Sensor Spot, FTC (normal range)	% air sat	ON	SA7-530-200	3	OFF	25.000	ON	1013	0.000	10%	400x	10	ON fiber length	2.00	
+Ch 2	Oxygen Sensor Spot, FTC (normal range)	% air sat	ON	SA7-530-200	3	OFF	25.000	ON	1013	0.000	10%	400x	10	ON fiber length	2.00	
+Ch 3	Oxygen Sensor Spot, FTC (normal range)	% air sat	ON	SA7-530-200	3	OFF	25.000	ON	1013	0.000	10%	400x	10	ON fiber length	2.00	
+Ch 4	Oxygen Sensor Spot, FTC (normal range)	% air sat	ON	SA7-530-200	3	OFF	25.000	ON	1013	0.000	10%	400x	10	ON fiber length	2.00	
+Temp.	Sensor	Measuring	Time (ms):	300	Offset ('C):	0.000	
+
+Calibration:	Status 0% Cal.	Status upper Cal.	Temp. 0% Cal. (°C)	Temp. upper Cal. (°C)	Press. (hPa)	Humidity (%)	Oxygen (%O2)	dphi0 (°)	dphi100 (°)	f	m	F (Hz)	kt (%/K)	tt (%/K)	Bkgd. Int. (mV)	Bkgd. dphi (°)	mt (1/K)	
+Ch 1	0% Calibration	Air with 100% Humidity or Air Saturated Water	24.939	25.000	1012	100.000	20.950	48.903	20.898	0.850	0.081	4000	1.184	-0.070	0.811	0.000	-0.000370	
+Ch 2	0% Calibration	Air with 100% Humidity or Air Saturated Water	24.921	25.000	1012	100.000	20.950	49.860	21.163	0.850	0.081	4000	1.184	-0.070	0.811	0.000	-0.000370	
+Ch 3	0% Calibration	Air with 100% Humidity or Air Saturated Water	24.891	25.000	1009	100.000	20.950	50.726	20.758	0.850	0.081	4000	1.184	-0.070	0.811	0.000	-0.000370	
+Ch 4	0% Calibration	Air with 100% Humidity or Air Saturated Water	24.998	25.000	1009	100.000	20.950	51.234	20.863	0.850	0.081	4000	1.184	-0.070	0.811	0.000	-0.000370	
+Data	Smoothing:	3	
+Date:	21-08-2017	
+			 	Oxygen	Oxygen	Oxygen	Oxygen	Compensation	Temperature	('C)		Pressure	Humidity	Temp. Probe	Int. Temp.	Analog In	Raw Data:	 dphi (°)			Signal	Intensity	(mV)		Ambient	Light	(mV)		Advanced Raw Values (only logged while raw data window is open)	
+Date	Time (HH:MM:SS)	Time (s)	Comment	Ch1	Ch2	Ch3	Ch4	Ch 1	Ch 2	Ch 3	Ch 4	(mbar)	(%)	('C)	('C)	 (mV)	Ch 1	Ch 2	Ch 3	Ch 4	Ch1	Ch2	Ch3	Ch4	Ch1	Ch2	Ch3	Ch4	 (MainBkgd->MainBkgd->MainPhi->RefAmpl->RefBkgnd->RefPhi)	
+21-08-2017	10:52:06	0.00		94.720	92.640	88.300	96.165	25.000	25.000	25.000	25.000	1012.52	66.959	---	---	---	21.462	21.977	22.062	21.244	52.328	93.723	93.903	38.669	5.508	4.969	6.049	5.905	
+21-08-2017	10:52:07	1.00		94.523	92.498	88.194	96.246	25.000	25.000	25.000	25.000	1012.50	66.959	---	---	---	21.485	21.994	22.076	21.235	52.346	93.735	93.951	38.675	5.512	4.964	6.049	5.885	
+21-08-2017	10:52:08	2.00		94.282	92.596	88.099	96.241	25.000	25.000	25.000	25.000	1012.48	66.952	---	---	---	21.512	21.982	22.088	21.236	52.386	93.789	93.988	38.668	5.523	4.950	6.059	5.809	
+21-08-2017	10:52:09	3.00		94.356	92.555	88.068	96.291	25.000	25.000	25.000	25.000	1012.47	66.962	---	---	---	21.504	21.987	22.092	21.230	52.395	93.875	94.003	38.666	5.530	4.953	6.069	5.828	
+21-08-2017	10:52:10	4.00		94.412	92.555	88.097	96.408	25.000	25.000	25.000	25.000	1012.48	66.955	---	---	---	21.497	21.987	22.088	21.217	52.402	93.751	94.013	38.668	5.533	4.965	6.071	5.856	
+21-08-2017	10:52:11	5.00		94.468	92.427	88.145	96.530	25.000	25.000	25.000	25.000	1012.42	66.990	---	---	---	21.492	22.002	22.083	21.204	52.391	93.673	94.024	38.677	5.531	4.965	6.069	5.882	
+21-08-2017	10:52:12	6.00		94.423	92.288	88.086	96.360	25.000	25.000	25.000	25.000	1012.42	67.026	---	---	---	21.497	22.019	22.090	21.223	52.393	93.591	94.042	38.674	5.529	4.952	6.080	5.809	
+21-08-2017	10:52:13	7.00		94.336	92.182	88.168	96.405	25.000	25.000	25.000	25.000	1012.41	67.079	---	---	---	21.506	22.031	22.080	21.218	52.438	93.691	94.058	38.661	5.539	4.940	6.072	5.792	

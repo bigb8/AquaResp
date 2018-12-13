@@ -1,0 +1,3 @@
+In use:y;
+volume:0.188;
+animal mass:0.006;

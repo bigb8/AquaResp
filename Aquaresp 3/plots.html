@@ -1,0 +1,78 @@
+<html>
+<head>
+<!-- <meta http-equiv="refresh" content="5" > -->
+<link rel="stylesheet" type="text/css" href="FishStyle.css">
+ <title>AquaResp - Stay at SMR !</title>
+ <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+</head>
+
+<script type="text/javascript">
+
+<!-- document.cookie = "MO2type=1;" -->
+
+
+  function P1() {   
+	window.frames['fra'].src = "./lib/MO2_1.html";
+  }
+
+  function P2() {   
+	window.frames['fra'].src = "./lib/MO2_2.html";
+  }  
+
+  function P3() {   
+	window.frames['fra'].src = "./lib/MO2_3.html";
+  }  
+
+  function P4() {   
+	window.frames['fra'].src = "./lib/MO2_4.html";
+  }  
+
+  function PA() {  
+	window.frames['fra'].src = "./lib/MO2_all.html";
+	
+	}  
+  
+  
+function ABS(){
+	
+	window.frames['fra'].src = "./lib/MO2_ABS_all.html";
+	
+	}  
+  
+function PO() {   
+	window.frames['fra'].src = "./lib/MO2_PO2.html";
+  }  
+  
+  
+ function RR() {  
+	window.frames['fra'].src = "./lib/R2.html";
+  }  
+ 
+
+</script>
+<body style="margin:0px;padding:0px;overflow:hidden">
+<h1 class="logo">AquaResp 3.0 <span class="versionname">"ASAP"</span></h1>
+
+
+<p>
+<button class="button_ref22" onclick="location.reload();">Update Figures</button>
+<button class="button_ref" onclick="PA();">MO2 Mass Specific vs time</button>
+<button class="button_ref" onclick="PO();">MO2 vs PO2</button>
+<button class="button_ref" onclick="RR();">Rsq. vs time</button>
+<button class="button_ref2" onclick="ABS();">MO2 ABS vs time</button>
+
+</p>
+
+<iframe id="fra" src = "./lib/MO2_all.html" scrolling="no" frameborder="0"  style="overflow:hidden;height:100%;width:100%"></iframe>
+
+
+</body>
+
+
+
+
+
+accepted
+
+</html>
+

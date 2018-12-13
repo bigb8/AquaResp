@@ -1,0 +1,6 @@
+O2 Sensor:4;Presens Fibox 3;
+AD:0;Cleware 1;
+Experiment type:0;Standard SMR (Flush -> Wait -> Measure);
+Flush:90;;
+wait:30;;
+measure:60;;
