@@ -122,7 +122,7 @@ def MeasurementPeriod(mainpath):
 			filehandling.updateLastmo2file(0,MO2,rr**2)
 			
 			filehandling.MO2Save(timestartmeasurement2,in_hours,unixtime, MO2, slope, intercept, rr, rr**2, p_value, std_err,duration,avgpo2,medianpo2,minpo2,maxpo2, maxpo2-minpo2,beta,rRespFish,in_hours, in_minutes,in_seconds, in_days,ik)
-			filehandling.MO2Save_TOT(timestartmeasurement,in_hours,unixtime, MO2_TOT, slope, intercept, rr, r2, p_value,ik)
+			filehandling.MO2Save_TOT(timestartmeasurement,in_hours,unixtime, MO2_TOT, slope, intercept, rr,  rr**2, p_value,ik)
 			
 			
 			try:	
