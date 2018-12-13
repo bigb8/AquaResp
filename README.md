@@ -27,6 +27,6 @@ This creates icons on the desktop
 
 
 
-## Acknowledgement
+## Acknowledgements
 
 Thank you to <a href = "https://www1.bio.ku.dk/english/staff/?pure=en/persons/158364">Bent Vismann</a> for testing of AquaResp and inputs on usage of AquaResp for invertebrates.
