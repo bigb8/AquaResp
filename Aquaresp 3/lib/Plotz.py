@@ -39,7 +39,7 @@ for resp in range(1,filehandling.GetNumResp()+1):
 	y = np.array(mo2)
 	color = [(255,0,0),(0,255,0),(0,0,255),(125,255,0)]
 	# output to static HTML file
-	output_file(myp + "MO2_" +str(resp)+ ".html")
+	output_file(myp + "MO2_" +str(resp)+ ".html",mode="inline")
 	# create a new plot with a title and axis labels
 	p = figure(title="Oxygen Consumption: Mass-Specific ", x_axis_label='Time [h]', y_axis_label='MO2 [mgO2 / kg / hr]',tools="box_zoom,wheel_zoom,save,hover,reset,crosshair,",tooltips="@y",x_range=(0, np.array(x).max() +5), y_range=(np.array(y).min() -20, np.array(y).max() +20))
 	p.toolbar.active_scroll = p.select_one(WheelZoomTool) 
@@ -54,7 +54,7 @@ for resp in range(1,filehandling.GetNumResp()+1):
 	# y=y
 	color = [(255,0,0),(0,255,0),(0,0,255),(125,255,0)]
 	# output to static HTML file
-	output_file(myp + "MO2_ABS_" +str(resp)+ ".html")
+	output_file(myp + "MO2_ABS_" +str(resp)+ ".html",mode="inline")
 	# create a new plot with a title and axis labels
 	p = figure(title="Oxygen Consumption: Absolute ", x_axis_label='Time [h]', y_axis_label='MO2 [mgO2 / hr]',tools="box_zoom,wheel_zoom,save,hover,reset,crosshair,",tooltips="@y",x_range=(0, np.array(x).max() +5), y_range=(np.array(y).min(), np.array(y).max()))
 	p.toolbar.active_scroll = p.select_one(WheelZoomTool) 
@@ -78,7 +78,7 @@ for resp in range(1,filehandling.GetNumResp()+1):
 	y = np.array(mo2)
 	color = [(255,0,0),(0,255,0),(0,0,255),(125,255,0)]
 	# output to static HTML file
-	output_file(myp + "MO2_all.html")
+	output_file(myp + "MO2_all.html",mode="inline")
 
 	p.toolbar.active_scroll = p.select_one(WheelZoomTool) 
 	p.scatter(x, y, legend="Resp " + str(resp), radius=.2,fill_color=color[resp-1], fill_alpha=0.6,line_color=(0,0,0))
@@ -102,7 +102,7 @@ for resp in range(1,filehandling.GetNumResp()+1):
 	
 	color = [(255,0,0),(0,255,0),(0,0,255),(125,255,0)]
 	# output to static HTML file
-	output_file(myp + "MO2_ABS_all.html")
+	output_file(myp + "MO2_ABS_all.html",mode="inline")
 
 	p.toolbar.active_scroll = p.select_one(WheelZoomTool) 
 	p.scatter(x, y, legend="Resp " + str(resp), radius=.2,fill_color=color[resp-1], fill_alpha=0.6,line_color=(0,0,0))
@@ -125,7 +125,7 @@ y = np.array(mo2)
 	# create a new plot with a title and axis labels
 p = figure(title="Oxygen Consumption: Mass-Specific ", x_axis_label='PO2 [%]', y_axis_label='MO2 [mgO2 / kg / hr]',tools="box_zoom,wheel_zoom,save,hover,reset,crosshair,",tooltips="@y",x_range=(0, np.array(x).max() +5), y_range=(np.array(y).min() -.5, np.array(y).max() +20))	
 for resp in range(1,filehandling.GetNumResp()+1):
-	print(resp)
+	# print(resp)
 	
 	# prepare data
 	mo2,po2,r2,timeh,num = filehandling.GetsummaryData(resp)
@@ -134,7 +134,7 @@ for resp in range(1,filehandling.GetNumResp()+1):
 	y = np.array(mo2)
 	color = [(255,0,0),(0,255,0),(0,0,255),(125,255,0)]
 	# output to static HTML file
-	output_file(myp + "MO2_PO2.html")
+	output_file(myp + "MO2_PO2.html",mode="inline")
 
 	p.toolbar.active_scroll = p.select_one(WheelZoomTool) 
 	p.scatter(x, y, legend="Resp " + str(resp), radius=.5,fill_color=color[resp-1], fill_alpha=0.6,line_color=(0,0,0))
@@ -147,7 +147,7 @@ save(p)
 
 p = figure(title="Oxygen Consumption: Absolute ", x_axis_label='PO2 [%]', y_axis_label='MO2 [mgO2 / hr]',tools="box_zoom,wheel_zoom,save,hover,reset,crosshair,",tooltips="@y",x_range=(0, np.array(x).max() +5), y_range=(np.array(y).min()-.5 , np.array(y).max()+.5))	
 for resp in range(1,filehandling.GetNumResp()+1):
-	print(resp)
+	# print(resp)
 	
 	# prepare data
 	mo2,po2,r2,timeh,num = filehandling.GetsummaryData(resp)
@@ -163,7 +163,7 @@ for resp in range(1,filehandling.GetNumResp()+1):
 	
 	color = [(255,0,0),(0,255,0),(0,0,255),(125,255,0)]
 	# output to static HTML file
-	output_file(myp + "MO2_ABS_PO2.html")
+	output_file(myp + "MO2_ABS_PO2.html",mode="inline")
 
 	p.toolbar.active_scroll = p.select_one(WheelZoomTool) 
 	p.scatter(x, y, legend="Resp " + str(resp), radius=.5,fill_color=color[resp-1], fill_alpha=0.6,line_color=(0,0,0))
@@ -196,7 +196,7 @@ for resp in range(1,filehandling.GetNumResp()+1):
 	y = np.array(r2)
 	color = [(255,0,0),(0,255,0),(0,0,255),(125,255,0)]
 	# output to static HTML file
-	output_file(myp + "R2.html")
+	output_file(myp + "R2.html",mode="inline")
 
 	p.toolbar.active_scroll = p.select_one(WheelZoomTool) 
 	p.scatter(x, y, legend="Resp " + str(resp), radius=.2,fill_color=color[resp-1], fill_alpha=0.6,line_color=(0,0,0))
