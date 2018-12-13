@@ -23,3 +23,10 @@ This installs Python for you and the libraries needed to run AquaResp 3.0 ASAP
 #### Run InstallPart3.vbs
 This creates icons on the desktop
 
+
+
+
+
+## Acknowledgement
+
+Thank you to <a href = "https://www1.bio.ku.dk/english/staff/?pure=en/persons/158364">Bent Vismann</a> for testing of AquaResp and inputs on usage of AquaResp for invertebrates.
