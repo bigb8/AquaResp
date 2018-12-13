@@ -137,7 +137,7 @@ for resp in range(1,filehandling.GetNumResp()+1):
 	output_file(myp + "MO2_PO2.html",mode="inline")
 
 	p.toolbar.active_scroll = p.select_one(WheelZoomTool) 
-	p.scatter(x, y, legend="Resp " + str(resp), radius=.5,fill_color=color[resp-1], fill_alpha=0.6,line_color=(0,0,0))
+	p.scatter(x, y, legend="Resp " + str(resp), radius=.2,fill_color=color[resp-1], fill_alpha=0.6,line_color=(0,0,0))
 	p.line(x, y, alpha=0.6,line_color=(0,0,0))
 	# show the results
 save(p)
@@ -166,7 +166,7 @@ for resp in range(1,filehandling.GetNumResp()+1):
 	output_file(myp + "MO2_ABS_PO2.html",mode="inline")
 
 	p.toolbar.active_scroll = p.select_one(WheelZoomTool) 
-	p.scatter(x, y, legend="Resp " + str(resp), radius=.5,fill_color=color[resp-1], fill_alpha=0.6,line_color=(0,0,0))
+	p.scatter(x, y, legend="Resp " + str(resp), radius=.2,fill_color=color[resp-1], fill_alpha=0.6,line_color=(0,0,0))
 	p.line(x, y, alpha=0.6,line_color=(0,0,0))
 	# show the results
 save(p)
