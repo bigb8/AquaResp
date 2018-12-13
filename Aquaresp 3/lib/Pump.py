@@ -42,7 +42,7 @@ if my_interface == 0:
 	#3;Channel
 	subprocess.Popen(["python",  myp + 'pump control'+os.sep +"cle.py",str(onoff),str(0),str(0)])
 	# print devno,channel
-	print("CUSB")
+	# print("CUSB")
 		
 		
 if my_interface == 1:
@@ -67,7 +67,7 @@ if my_interface == 2:
 	## 3: Measurement Computing 1208
 	## Implement sysargs for channel control
 	subprocess.Popen(["python",  myp + 'pump control'+os.sep+"mmc1208.py",str(onoff),str(0),str(0)])
-	print("MCC")
+	# print("MCC")
 
 
 
