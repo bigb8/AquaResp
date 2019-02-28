@@ -17,8 +17,11 @@ Download the by pressing "Clone or Download" button in the top right corner of t
 #### First run InstallPart1.vbs
 This downloads Python for you, the version that has been used for testing (3.6.6. - 32-bit)
 
-#### Right click on InstallPart2.bat and choose "run as administrator"
-This installs Python for you and the libraries needed to run AquaResp 3.0 ASAP
+#### Right click on InstallPart2a.bat and choose "run as administrator"
+This initiates  Python installation for you 
+
+#### Right click on InstallPart2b.bat and choose "run as administrator"
+This installs the libraries needed to run AquaResp 3.0 ASAP
 
 #### Run InstallPart3.vbs
 This creates icons on the desktop
