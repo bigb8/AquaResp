@@ -14,16 +14,19 @@ Download the by pressing "Clone or Download" button in the top right corner of t
 
 ### Windows 10:
 
-#### First run InstallPart1.vbs
+#### Step 1 - downloading Python
+##### First run InstallPart1.vbs
 This downloads Python for you, the version that has been used for testing (3.6.6. - 32-bit)
 
-#### Right click on InstallPart2a.bat and choose "run as administrator"
+#### Step 2 - installing Python and libraries
+##### a. Right click on InstallPart2a.bat and choose "run as administrator"
 This initiates  Python installation for you 
 
-#### Right click on InstallPart2b.bat and choose "run as administrator"
+##### b. Right click on InstallPart2b.bat and choose "run as administrator"
 This installs the libraries needed to run AquaResp 3.0 ASAP
 
-#### Run InstallPart3.vbs
+#### Step 3 - adding Icons to your desktop
+##### Run InstallPart3.vbs
 This creates icons on the desktop
 
 
