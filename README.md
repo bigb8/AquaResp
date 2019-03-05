@@ -11,6 +11,9 @@ Please cite the code when using the software
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2584015.svg)](https://doi.org/10.5281/zenodo.2584015)
 
+Cite as
+Morten Bo Søndergaard Svendsen, & John Fleng Steffensen. (2019, March 5). AquaResp 3 (Version V3.0). Zenodo. http://doi.org/10.5281/zenodo.2584015
+
 ## Installation
 
 Download the by pressing "Clone or Download" button in the top right corner of this screen. 
