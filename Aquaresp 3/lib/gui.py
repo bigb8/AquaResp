@@ -12,8 +12,10 @@ main_p = myp.split("lib")[0]
 temp_p = main_p + "temp"
 lib_p = main_p + "lib"
 def instrumentoptions():
-	experimenttypeChoices = ["Standard SMR (Flush -> Wait -> Measure)","MMR and then SMR (Wait -> Measure -> Flush)", "delta pO2 flush","Adaptive respirometry","Closed respirometry - for teaching"]
-	o2sensortypeChoices = ["Pyroscience Firesting 4 channel", "Pyroscience Firesting 3 channel","Pyroscience Firesting 2 channel","Pyroscience Firesting 1 channel","Presens Fibox 3"]
+	experimenttypeChoices = ["Standard SMR (Flush -> Wait -> Measure)","MMR and then SMR (Wait -> Measure -> Flush)", "delta pO2 flush","Closed respirometry - for teaching"]
+	# experimenttypeChoices = ["Standard SMR (Flush -> Wait -> Measure)","MMR and then SMR (Wait -> Measure -> Flush)", "delta pO2 flush","Adaptive respirometry","Closed respirometry - for teaching"]
+	o2sensortypeChoices = ["Pyroscience Firesting 4 channel", "Presens Fibox 3"]
+	# o2sensortypeChoices = ["Pyroscience Firesting 4 channel", "Pyroscience Firesting 3 channel","Pyroscience Firesting 2 channel","Pyroscience Firesting 1 channel","Presens Fibox 3"]
 	typeADChoices = ["Cleware 1","Cleware 4","Measurement Computing 1208LS"]
 	return experimenttypeChoices,o2sensortypeChoices,typeADChoices
 		
@@ -375,7 +377,7 @@ class animalssss ( wx.Frame ):
 		self.Salinity.Bind( wx.EVT_TEXT, self.CalcBeta )
 		self.m_button4.Bind( wx.EVT_BUTTON, self.SaveNQuit )
 	
-	
+		
 	
 		
 		self.Show(True)
@@ -422,11 +424,44 @@ class animalssss ( wx.Frame ):
 		if self.m_checkBox1.GetValue() == False:
 			self.vresp1.Enable( False )
 			self.mresp1.Enable( False )
+			
+			#Disable respirometer 2 option
+			self.m_checkBox2.Enable( False )
+			self.m_checkBox2.SetValue(False)
+			self.vresp2.Enable( False )
+			self.mresp2.Enable( False )
+			#Disable respirometer 3 option
+			self.m_checkBox3.Enable( False )
+			self.m_checkBox3.SetValue(False)
+			self.vresp3.Enable( False )
+			self.mresp3.Enable( False )
+
+			#Disable respirometer 4 option
+			self.m_checkBox4.Enable( False )
+			self.m_checkBox4.SetValue(False)
+			self.vresp4.Enable( False )
+			self.mresp4.Enable( False )
+
+			
 		else:
 			self.vresp1.Enable( True )
 			self.mresp1.Enable( True)
+			
+			#Enable respirometer 2 option
+			self.m_checkBox2.Enable( True )
+			#Enable respirometer 3 option
+			self.m_checkBox3.Enable( True )
+			#Enable respirometer 4 option
+			self.m_checkBox4.Enable( True )
+			
+			
+			
+			
+			
 	
 	def resp2act( self, event ):
+		# if not self.resp1act:
+	
 		if self.m_checkBox2.GetValue() == False:
 			self.vresp2.Enable( False )
 			self.mresp2.Enable( False )
@@ -546,94 +581,11 @@ class RunningExperiment ( wx.Frame ):
 		self.PeriodStatus.SetBackgroundColour( wx.SystemSettings.GetColour( wx.SYS_COLOUR_WINDOWTEXT ) )
 		
 		bSizer3.Add( self.PeriodStatus, 1, wx.ALL|wx.EXPAND, 5 )
-		
-		self.m_staticText89 = wx.StaticText( self, wx.ID_ANY, u"Latest data", wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.m_staticText89.Wrap( -1 )
-		bSizer3.Add( self.m_staticText89, 0, wx.ALL, 5 )
-		
-		fgSizer21 = wx.FlexGridSizer( 0, 10, 0, 0 )
-		fgSizer21.SetFlexibleDirection( wx.BOTH )
-		fgSizer21.SetNonFlexibleGrowMode( wx.FLEX_GROWMODE_SPECIFIED )
-		
-		self.MO2lab1 = wx.StaticText( self, wx.ID_ANY, u"MO2:", wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.MO2lab1.Wrap( -1 )
-		fgSizer21.Add( self.MO2lab1, 0, wx.ALL, 5 )
-		
-		self.mo1 = wx.StaticText( self, wx.ID_ANY, u"--------", wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.mo1.Wrap( -1 )
-		fgSizer21.Add( self.mo1, 0, wx.ALL, 5 )
-		
-		self.mo2 = wx.StaticText( self, wx.ID_ANY, u"--------", wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.mo2.Wrap( -1 )
-		fgSizer21.Add( self.mo2, 0, wx.ALL, 5 )
-		
-		self.mo3 = wx.StaticText( self, wx.ID_ANY, u"--------", wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.mo3.Wrap( -1 )
-		fgSizer21.Add( self.mo3, 0, wx.ALL, 5 )
-		
-		self.mo4 = wx.StaticText( self, wx.ID_ANY, u"--------", wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.mo4.Wrap( -1 )
-		fgSizer21.Add( self.mo4, 0, wx.ALL, 5 )
-		
-		self.m_staticText961 = wx.StaticText( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.m_staticText961.Wrap( -1 )
-		fgSizer21.Add( self.m_staticText961, 0, wx.ALL, 5 )
-		
-		self.m_staticText971 = wx.StaticText( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.m_staticText971.Wrap( -1 )
-		fgSizer21.Add( self.m_staticText971, 0, wx.ALL, 5 )
-		
-		self.m_staticText981 = wx.StaticText( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.m_staticText981.Wrap( -1 )
-		fgSizer21.Add( self.m_staticText981, 0, wx.ALL, 5 )
-		
-		self.m_staticText991 = wx.StaticText( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.m_staticText991.Wrap( -1 )
-		fgSizer21.Add( self.m_staticText991, 0, wx.ALL, 5 )
-		
-		
-		bSizer3.Add( fgSizer21, 1, wx.EXPAND, 5 )
-		
+			
 		fgSizer2 = wx.FlexGridSizer( 0, 10, 0, 0 )
 		fgSizer2.SetFlexibleDirection( wx.BOTH )
 		fgSizer2.SetNonFlexibleGrowMode( wx.FLEX_GROWMODE_SPECIFIED )
-		
-		self.R2lab = wx.StaticText( self, wx.ID_ANY, u"R2:", wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.R2lab.Wrap( -1 )
-		fgSizer2.Add( self.R2lab, 0, wx.ALL, 5 )
-		
-		self.r21 = wx.StaticText( self, wx.ID_ANY, u"--------", wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.r21.Wrap( -1 )
-		fgSizer2.Add( self.r21, 0, wx.ALL, 5 )
-		
-		self.r22 = wx.StaticText( self, wx.ID_ANY, u"--------", wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.r22.Wrap( -1 )
-		fgSizer2.Add( self.r22, 0, wx.ALL, 5 )
-		
-		self.r23 = wx.StaticText( self, wx.ID_ANY, u"--------", wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.r23.Wrap( -1 )
-		fgSizer2.Add( self.r23, 0, wx.ALL, 5 )
-		
-		self.r24 = wx.StaticText( self, wx.ID_ANY, u"--------", wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.r24.Wrap( -1 )
-		fgSizer2.Add( self.r24, 0, wx.ALL, 5 )
-		
-		self.m_staticText96 = wx.StaticText( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.m_staticText96.Wrap( -1 )
-		fgSizer2.Add( self.m_staticText96, 0, wx.ALL, 5 )
-		
-		self.m_staticText97 = wx.StaticText( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.m_staticText97.Wrap( -1 )
-		fgSizer2.Add( self.m_staticText97, 0, wx.ALL, 5 )
-		
-		self.m_staticText98 = wx.StaticText( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.m_staticText98.Wrap( -1 )
-		fgSizer2.Add( self.m_staticText98, 0, wx.ALL, 5 )
-		
-		self.m_staticText99 = wx.StaticText( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
-		self.m_staticText99.Wrap( -1 )
-		fgSizer2.Add( self.m_staticText99, 0, wx.ALL, 5 )
-		
+			
 		bSizer3.Add( fgSizer2, 1, wx.EXPAND, 5 )
 		
 		fgSizer22 = wx.FlexGridSizer( 0, 10, 0, 0 )
