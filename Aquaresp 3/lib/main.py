@@ -20,9 +20,6 @@ lib_p = main_p + "lib"
 # interface,deviceNo =  Flushy.GiveDeviceInterface()
 
 
-
-	
-
 def ConventionalIMF(tf,tw,tm):
 #Experimental control for IMF starting with flush period. 
 #Having only 1 channel to control the entire setup
@@ -259,8 +256,8 @@ def closedrespirometry_uhuh(mo2interval):
 	devno = 0
 	ch1 = 16
 
-	Popen(["py","-3", lib_p + os.sep +"pump control"+os.sep+"FlushCle.py"])
-	
+	# Popen(["py","-3", lib_p + os.sep +"pump control"+os.sep+"FlushCle.py"])
+	Popen(["python", lib_p + os.sep + "Pump.py","1","0","1"])
 	print("Experiment starting in 60s, time is now " + time.strftime("%H:%M:%S"))
 	filehandling.PrintPeriod("W")
 	time.sleep(60)
@@ -341,7 +338,9 @@ if __name__ == "__main__":
 	
 	# update this
 	exptype,ft,wt,mt,dpo2,mo2interval = sys.argv[1:]
-
+	#For reference
+	# experimenttypeChoices = ["Standard SMR (Flush -> Wait -> Measure)","MMR and then SMR (Wait -> Measure -> Flush)", "delta pO2 flush","Closed respirometry - for teaching"]
+	
 	if int(exptype) == 0:
 		#Conventional IMF, with flush started
 		ConventionalIMF(int(ft),int(wt),int(mt))
@@ -353,16 +352,14 @@ if __name__ == "__main__":
 	elif int(exptype) == 2:
 		#Delta pO2 flush
 		# deltaPO2IMF(setp_dpo2,ft)
-		deltaPO2IMF(4,ft)
-	
+		
+		with open(temp_p + os.sep + "DeltaSetPoint.txt",'r') as fdf:
+			datafile = fdf.readlines()
+			
+		sp = int(datafile[0])	
+		deltaPO2IMF(sp,ft)
+		
 	elif int(exptype) == 3:
-		#Adaptive respirometry
-		# adaptiveIMF(minpoints,r2lim)
-		#TODO
-		print( 'not implemented yet')
-		
-		
-	elif int(exptype) == 4:
 		# # Closed respirometry - baad boy / girl!
 		closedrespirometry_uhuh(mo2interval)
 		
