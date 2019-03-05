@@ -39,4 +39,5 @@ Thank you to <a href = "https://www1.bio.ku.dk/english/staff/?pure=en/persons/15
 
 Thank you to <a href = "https://www.researchgate.net/profile/Denis_Chabot">Denis Chabot</a> for testing of AquaResp over many occasions and providing inputs on usage of AquaResp.
 
+Thank you to <a href = "https://www.researchgate.net/profile/Heidrikur_Bergsson3">Heiðrikur Bergsson</a> for testing and using AquaResp.
 
