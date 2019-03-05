@@ -56,16 +56,7 @@ def ReadFiresting(fn):
 		ans =  tail(f)
 		
 	n = 0
-	
-	# print(ans)
-	# pO2_1 = ans.split('\t')[4+n]
-	# pO2_2 = ans.split("\t")[5+n]
-	# pO2_3 = ans.split("\t")[6+n]
-	# pO2_4 = ans.split("\t")[7+n]
-
-	# oxtime = ans.split("\t")[1]
-	
-	
+		
 	try:
 		pO2_1 = ans.split("\t")[4+n]
 		pO2_2 = ans.split("\t")[5+n]
@@ -80,8 +71,8 @@ def ReadFiresting(fn):
 		pO2_3= -4
 		pO2_4= -4
 		oxtime=1
-	# print(pO2_1,pO2_2,pO2_3,pO2_4,oxtime)
-	return pO2_1,pO2_2,pO2_3,pO2_4,oxtime
+
+	return pO2_1.replace(",","."),pO2_2.replace(",","."),pO2_3.replace(",","."),pO2_4.replace(",","."),oxtime.replace(",",".")
 	
 def ReadFirestingOld(fn):
 	with open(fn,'rb') as f:
@@ -154,7 +145,7 @@ def SensorMess():
 	FNFibox = "--"
 	fnslave = mainpath + "oxygen" + os.sep + "firestingSlave.txt"
 	
-	if sensor =="4":
+	if sensor =="1":
 		Firesting = False
 		Presens4 = False
 		Fibox3 = True
