@@ -26,16 +26,25 @@ This downloads Python for you, the version that has been used for testing (3.6.6
 
 #### Step 2 - installing Python and libraries
 ##### a. Right click on InstallPart2a.bat and choose "run as administrator"
-This initiates  Python installation for you 
+This initiates  Python installation for you.
+
+If this fails, open the downloaded Python (InstallPython.exe), and make sure to enable the option "Add to PATH" during the first step of installation
 
 ##### b. Right click on InstallPart2b.bat and choose "run as administrator"
 This installs the libraries needed to run AquaResp 3.0 ASAP
 
+If this step is failing, open the command prompt (WinButton + R, write "cmd", and press enter), and run the installation commands for the specific library. The following are needed for AQ3
+
+python -m pip install bokeh
+python -m pip install numpy
+python -m pip install scipy
+python -m pip install matplotlib
+python -m pip install -U wxPython
+python -m pip install mcculw
+
 #### Step 3 - adding Icons to your desktop
 ##### Run InstallPart3.vbs
-This creates icons on the desktop
-
-
+This creates icons on the desktop. You can do that manually.
 
 
 
