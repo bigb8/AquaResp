@@ -24,7 +24,7 @@ except:
 
 #Get interface
 my_interface = int(filehandling.GetExperimentInfo()[1])
-print(my_interface)
+# print(my_interface)
 # my_interface = 0
 #my_interface = 0
 ## 0: Comparativ USB 1
