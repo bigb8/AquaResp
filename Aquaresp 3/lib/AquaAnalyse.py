@@ -40,8 +40,8 @@ def mo2maker(slope,temp,salinity,patm,mfish,vresp):
 	
 	beta = pO2max * oxysolmmhg / 1000.0  # divide by 1000 to get mg O2 / L
 	
-	MO2 = -1*(slope/100)*beta*rRespFish*3600
-	MO2_TOT = -1*(slope/100)*beta*vreal*3600
+	MO2 = -1*(slope/100)*beta*rRespFish*3600.0
+	MO2_TOT = -1*(slope/100)*beta*vresp*3600.0
         #only per period change to hour
 	#and slope is percentage air. this shouldchangetoo
 	return MO2, beta, rRespFish,MO2_TOT
