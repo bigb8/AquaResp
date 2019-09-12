@@ -90,10 +90,8 @@ def CopyExperimentalInfo():
 	#Copies relavant info from temp to experimental folder
 	pf, slopefolder, expfolder = presentfolderFunc()
 	for i in range(1,5):
-		# try:
-			shutil.copyfile(temppath + "respirometer_" + str(i) + ".txt", expfolder + "respirometer_" + str(i) + ".txt" )
-		# except:
-			# print "g"
+		shutil.copyfile(temppath + "respirometer_" + str(i) + ".txt", expfolder + "respirometer_" + str(i) + ".txt" )
+
 			
 	shutil.copyfile(temppath + "experiment.txt", expfolder + "experiment.txt")
 	shutil.copyfile(temppath + "timestampstart.txt", expfolder + "timestampstart.txt")
@@ -185,17 +183,13 @@ def GetExperimentInfo():
 	return sensor,AD, ExpType, ft,wt,mt,temperature,salinity,o2sol, UNIXtime, Dateime, IsSlave
 
 def datafileStop():
-	# pf, slopefolder, expfolder = presentfolderFunc()
 	for chan in range( 1, 5):
 		myfile = temppath  + "Summary data resp " + str(chan)+".txt"	
 		inuse, volume, animalmass = readrespirometerinfo(chan)
 		if inuse =="y":
 			with open(myfile,"w") as f:
 				f.write(" ")
-	
-	# import AquaPlot
-	# AquaPlot.fakeJSdatasource()
-	
+
 	
 	
 	
@@ -212,6 +206,9 @@ def datafileinit():
 		myfile = pf + os.sep + "Summary data resp " + str(chan)+".txt"	
 		inuse, volume, animalmass = readrespirometerinfo(chan)
 		if inuse =="y":
+		
+			with open(pf+"Summary data ABS resp " + str(chan)+".txt","a") as stxt1:stxt1.write("%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;\n" % ("TimeStartMeasurement","In Hours","Unix time", "MO2", "Slope", "Intercept", "Pearson r", "R squared", "P value","respirometer"))
+		
 			with open(myfile,"w") as f:
 				f.write("AQUARESP VERSION 3  ASAP - Data file "+"\n")
 				f.write("--------------------------------------------------------------------------------------------------------------------------------\n")
@@ -265,31 +262,19 @@ def MO2Save(timestartmeasurement,in_hours,unixtime, MO2, slope, intercept, rr, r
 	
 	#"TIME;TIME HOURS;TIME UNIX;MO2;R^2;SLOPE;P;duration seconds;avg po2;median po2; minimum po2; max po2;delta po2;\n"
 	with open(pf+"Summary data resp " + str(ch)+".txt","a") as stxt1:
-		# stxt1.write("%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;" % (timestartmeasurement,in_hours,unixtime,"%.3f" % MO2, "%.6" %slope, "%.6f" % intercept, "%.6f" %rr, "%.6f" %r2, "%.6f" % p_value, "%.6f" % std_err,duration,"%.2f" % avgpo2,"%.2f" % medianpo2,"%.2f" % minpo2,"%.2f" % maxpo2, "%.2f" % dpo2,"%.2f" % beta,"%.2f" % rRespFish,"%.2f" % in_hours, "%.2f" % in_minutes,in_seconds, "%.2f" % in_days))
 		stxt1.write("%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;\n" % (timestartmeasurement,in_hours,unixtime, MO2, slope,  intercept,  rr,  r2,  p_value,  std_err,duration, avgpo2, medianpo2, minpo2, maxpo2,  dpo2, beta, rRespFish, in_hours, in_minutes,in_seconds, in_days))
 		
 	with open(temppath+"Summary data resp " + str(ch)+".txt","a") as stxt1:
 		stxt1.write("%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;\n" % (timestartmeasurement,in_hours,unixtime, MO2,rr,  r2,  p_value,  std_err,duration, avgpo2, medianpo2, minpo2, maxpo2,  dpo2, beta, rRespFish, in_hours, in_minutes,in_seconds, in_days))
 		
-	# with open('C:\AQUARESP\\temp\datacurrent'+ str(chh)+'.txt',"a") as atxt:
-		# atxt.write(str(time)+";"+str(MO2)+";"+str(PO2)+";"+str(RSQ)+";"+str(SLOPE)+";\n")
-
-		
 		
 def MO2Save_TOT(timestartmeasurement,in_hours,unixtime, MO2, slope, intercept, rr, r2, p_value,ch):
 
 	pf, slopefolder, expfolder = presentfolderFunc()
-	
 	#"TIME;TIME HOURS;TIME UNIX;MO2;R^2;SLOPE;P;duration seconds;avg po2;median po2; minimum po2; max po2;delta po2;\n"
 	with open(pf+"Summary data ABS resp " + str(ch)+".txt","a") as stxt1:
-		stxt1.write("%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;\n" % ("TimeStartMeasurement","In Hours","Unix time", "MO2", "Slope", "Intercept", "Pearson r", "R squared", "P value","respirometer"))
 		stxt1.write("%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;\n" % (timestartmeasurement,in_hours,unixtime, MO2, slope, intercept, rr, r2, p_value,ch))
 		
-	# with open(temppath+"Summary data resp " + str(ch)+".txt","a") as stxt1:
-		# stxt1.write("%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;\n" % (timestartmeasurement,in_hours,unixtime, MO2,rr,  r2,  p_value,  std_err,duration, avgpo2, medianpo2, minpo2, maxpo2,  dpo2, beta, rRespFish, in_hours, in_minutes,in_seconds, in_days))
-		
-	# with open('C:\AQUARESP\\temp\datacurrent'+ str(chh)+'.txt',"a") as atxt:
-		# atxt.write(str(time)+";"+str(MO2)+";"+str(PO2)+";"+str(RSQ)+";"+str(SLOPE)+";\n")		
 		
 def CleanSummaryData():
 	for i in range(1,5):
@@ -321,12 +306,3 @@ def CleanSummaryData():
 		d = os.path.join(dst, item)
 		shutil.copy(s, d)
 	
-	# import AquaPlot
-	# AquaPlot.delFAKEJS()
-	
-	
-# CleanSummaryData()
-# datafileinit()
-# CopyExperimentalInfo()
-# GetTimeStartExperiment()
-# datafileStop()
