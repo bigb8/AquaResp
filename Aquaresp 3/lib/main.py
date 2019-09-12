@@ -26,12 +26,9 @@ def ConventionalIMF(tf,tw,tm):
 	global interface
 	devno = 0
 	ch1 = 16
-
-	# Flushy.EmergencyFlush()
 	exp = True	
 	while exp:	
-		# Flushy.FlipOn(interface,devno,ch1)
-		#Popen(["python", lib_p + os.sep + "Pump.py","1","0","1"])
+
 		Popen(["py","-3", lib_p + os.sep + "Pump.py","1","0","1"])
 		
 		print( "Flush started: " + time.strftime("%Y-%m-%d %H:%M:%S"))
@@ -43,11 +40,8 @@ def ConventionalIMF(tf,tw,tm):
 		
 		time.sleep(tf)
 		Popen(["py","-3", lib_p + os.sep +"oxygenserver.py"])
-		#Popen(["python", lib_p + os.sep + "Pump.py","0","0","1"])
 		Popen(["py","-3", lib_p + os.sep + "Pump.py","0","0","1"])
 		
-		
-		# Flushy.FlipOff(interface,devno,ch1)
 		print( "Waiting period started: " + time.strftime("%Y-%m-%d %H:%M:%S"))
 		filehandling.SetperiodStart(int(time.time()),wt)
 		filehandling.PrintPeriod("W")
@@ -100,10 +94,8 @@ def ClosedStartIMF(tf,tw,tm):
 		exp = filehandling.TjekRun()
 		if not exp: break
 		time.sleep(tm)
-		# Flushy.FlipOn(interface,devno,ch1)
+
 		Popen(["py","-3", lib_p + os.sep + "Pump.py","1","0","1"])
-		
-		
 		print( "Flush started: " + time.strftime("%Y-%m-%d %H:%M:%S"))
 		filehandling.SetperiodStart(int(time.time()),ft)
 		exp = filehandling.TjekRun()
@@ -128,8 +120,6 @@ def deltaPO2IMF(setp_dpo2,tf):
 		if not exp: break
 		filehandling.PrintPeriod("F")
 		
-		
-		# time.sleep(int(tf)-30)
 		lf = 0
 		while lf < int(tf):
 			time.sleep(1)
@@ -147,12 +137,7 @@ def deltaPO2IMF(setp_dpo2,tf):
 		mandatorywait = 60
 		Popen(["py","-3", lib_p + os.sep + "Pump.py","0","0","1"])
 		
-		
-		
 		print("Chamber closed: " + time.strftime("%Y-%m-%d %H:%M:%S"))
-		
-		
-		
 		
 		filehandling.SetperiodStart(int(time.time()),mandatorywait)
 		filehandling.PrintPeriod("W")
