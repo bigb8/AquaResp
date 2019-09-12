@@ -36,10 +36,15 @@ This installs the libraries needed to run AquaResp 3.0 ASAP
 If this step is failing, open the command prompt (WinButton + R, write "cmd", and press enter), and run the installation commands for the specific library. The following are needed for AQ3
 
 python -m pip install bokeh
+
 python -m pip install numpy
+
 python -m pip install scipy
+
 python -m pip install matplotlib
+
 python -m pip install -U wxPython
+
 python -m pip install mcculw
 
 #### Step 3 - adding Icons to your desktop
@@ -56,3 +61,4 @@ Thank you to <a href = "https://www.researchgate.net/profile/Denis_Chabot">Denis
 
 Thank you to <a href = "https://www.researchgate.net/profile/Heidrikur_Bergsson3">Heiðrikur Bergsson</a> for testing and using AquaResp.
 
+Thank you to <a href = "https://www.saltnfish.dk">Emil Aputsiaq Christensen</a> for providing valuable usability input.
