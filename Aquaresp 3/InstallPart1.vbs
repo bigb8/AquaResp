@@ -3,7 +3,7 @@
 
 dim xHttp: Set xHttp = createobject("Microsoft.XMLHTTP")
 dim bStrm: Set bStrm = createobject("Adodb.Stream")
-xHttp.Open "GET", "https://www.python.org/ftp/python/3.6.6/python-3.6.6.exe", False
+xHttp.Open "GET", "https://www.python.org/ftp/python/3.7.4/python-3.7.4-amd64.exe", False
 xHttp.Send
 
 scriptdir = CreateObject("Scripting.FileSystemObject").GetParentFolderName(WScript.ScriptFullName)
