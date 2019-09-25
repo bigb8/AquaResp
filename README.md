@@ -15,24 +15,29 @@ Cite as:
 Morten Bo Søndergaard Svendsen, Peter G. Bushnell, & John Fleng Steffensen. (2019, March 5). AquaResp 3 (Version V3.0). Zenodo. http://doi.org/10.5281/zenodo.2584015
 
 ## Installation
+The present version is only supported on Windows 10 64 bit.
 
 Download the by pressing "Clone or Download" button in the top right corner of this screen. 
 
-### Windows 10:
+### Windows 10 - 64bit:
 
 #### Step 1 - downloading Python
-##### First run InstallPart1.vbs
-This downloads Python for you, the version that has been used for testing (3.6.6. - 32-bit)
+##### First run 1.vbs in the Installation folder
+This downloads Python for you, the version that has been used for testing (3.7.4. - 64-bit)
 
 #### Step 2 - installing Python and libraries
-##### a. Right click on InstallPart2a.bat and choose "run as administrator"
+##### Run 2.bat
 This initiates  Python installation for you.
 
 If this fails, open the downloaded Python (InstallPython.exe), and make sure to enable the option "Add to PATH" during the first step of installation
 
-##### b. Right click on InstallPart2b.bat and choose "run as administrator"
-This installs the libraries needed to run AquaResp 3.0 ASAP
 
+#### After Python has been installed
+##### Double click the CheckLibraries.py in the installation folder.
+This installs the libraries needed to run AquaResp 3.0 ASAP
+The buttons will change to green and display "OK" when libraries are installed.
+
+---
 If this step is failing, open the command prompt (WinButton + R, write "cmd", and press enter), and run the installation commands for the specific library. The following are needed for AQ3
 
 python -m pip install bokeh
@@ -47,9 +52,11 @@ python -m pip install -U wxPython
 
 python -m pip install mcculw
 
+--
+
 #### Step 3 - adding Icons to your desktop
-##### Run InstallPart3.vbs
-This creates icons on the desktop. You can do that manually.
+##### Run Create Links on Desktop.vbs  (in the Aquaresp 3 main folder)
+This creates icons on the desktop. You can do that manually aswell.
 
 
 
