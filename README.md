@@ -31,15 +31,14 @@ This initiates  Python installation for you.
 
 If this fails, open the downloaded Python (InstallPython.exe), and make sure to enable the option "Add to PATH" during the first step of installation
 
-Furter:
-
-We recommend setting either Mozilla Firefox or Google Chrome webbrowsers as default browser in Windows. The plotting feature does not work in Internet Explorer or Microsoft Edge browsers.
-
-
 #### After Python has been installed
 ##### Double click the CheckLibraries.py in the installation folder.
 This installs the libraries needed to run AquaResp 3.0 ASAP
 The buttons will change to green and display "OK" when libraries are installed.
+
+
+####Further:
+We recommend setting either Mozilla Firefox or Google Chrome webbrowsers as default browser in Windows. The plotting feature does not work in Internet Explorer or Microsoft Edge browsers.
 
 ---
 If this step is failing, open the command prompt (WinButton + R, write "cmd", and press enter), and run the installation commands for the specific library. The following are needed for AQ3
