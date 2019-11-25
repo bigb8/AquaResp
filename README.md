@@ -17,7 +17,7 @@ Morten Bo Søndergaard Svendsen, Peter G. Bushnell, & John Fleng Steffensen. (20
 ## Installation
 The present version is only supported on Windows 10 64 bit.
 
-Download the by pressing "Clone or Download" button in the top right corner of this screen. 
+Download Aquaresp by pressing "Clone or Download" button in the top right corner of this screen. 
 
 ### Windows 10 - 64bit:
 
@@ -30,6 +30,10 @@ This downloads Python for you, the version that has been used for testing (3.7.4
 This initiates  Python installation for you.
 
 If this fails, open the downloaded Python (InstallPython.exe), and make sure to enable the option "Add to PATH" during the first step of installation
+
+Furter:
+
+We recommend setting either Mozilla Firefox or Google Chrome webbrowsers as default browser in Windows. The plotting feature does not work in Internet Explorer or Microsoft Edge browsers.
 
 
 #### After Python has been installed
@@ -68,4 +72,4 @@ Thank you to <a href = "https://www.researchgate.net/profile/Denis_Chabot">Denis
 
 Thank you to <a href = "https://www.researchgate.net/profile/Heidrikur_Bergsson3">Heiðrikur Bergsson</a> for testing and using AquaResp.
 
-Thank you to <a href = "https://www.saltnfish.dk">Emil Aputsiaq Christensen</a> for providing valuable usability input.
+Thank you to <a href = "http://saltnfish.dk/cv/">Emil Aputsiaq Christensen</a> for providing valuable usability input.
