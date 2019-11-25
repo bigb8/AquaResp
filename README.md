@@ -40,7 +40,7 @@ The buttons will change to green and display "OK" when libraries are installed.
 ---
 If this step is failing, open the command prompt (WinButton + R, write "cmd", and press enter), and run the installation commands for the specific library. The following are needed for AQ3
 
-python -m pip install bokeh
+python -m pip install bokeh==1.3.0
 
 python -m pip install numpy
 
