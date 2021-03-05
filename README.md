@@ -57,6 +57,9 @@ python -m pip install mcculw
 
 --
 
+March 5 2021:
+If you are experiencing trouble with running the software after installation. Try running the tool CheckLibraries.py in the Installation folder.
+
 #### Step 3 - adding Icons to your desktop
 ##### Run Create Links on Desktop.vbs  (in the Aquaresp 3 main folder)
 This creates icons on the desktop. You can do that manually aswell.
