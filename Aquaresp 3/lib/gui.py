@@ -567,7 +567,8 @@ class RunningExperiment ( wx.Frame ):
 		
 		self.currentperiod = wx.StaticText( self, wx.ID_ANY, u"not started", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.currentperiod.Wrap( -1 )
-		gSizer6.Add( self.currentperiod, 1, wx.ALL|wx.EXPAND|wx.ALIGN_CENTER_VERTICAL|wx.ALIGN_CENTER_HORIZONTAL, 5 )
+
+		gSizer6.Add( self.currentperiod, 1, wx.ALL|wx.ALIGN_CENTER_VERTICAL|wx.ALIGN_CENTER_HORIZONTAL, 5 )
 		
 		self.m_staticText76 = wx.StaticText( self, wx.ID_ANY, u"Progression", wx.DefaultPosition, wx.DefaultSize, 0 )
 		self.m_staticText76.Wrap( -1 )
