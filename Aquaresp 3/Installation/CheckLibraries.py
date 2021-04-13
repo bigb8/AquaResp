@@ -8,8 +8,6 @@ import shutil
 
 ##
 myp = os.path.dirname(sys.argv[0]) + os.sep
-
-
 ###
 
 
@@ -70,51 +68,62 @@ i1.grid(row=1,columnspan=3,sticky="we")
 #Libraries
 def numpyy():
 	subprocess.call([sys.executable, "-m", "pip", "install", "--upgrade","pip"])
+	subprocess.call(["pip", "install", "--upgrade","pip"])
 	try:
 		import numpy as np
 		b31.config(bg="lightgreen")	
+		print("test")
 		b31.config(text ="OK")	
 		
 	except ImportError:
 		subprocess.call([sys.executable, "-m", "pip", "install", "numpy"])
+		subprocess.call(["pip", "install", "numpy"])
 
 def bokehh():
 	subprocess.call([sys.executable, "-m", "pip", "install", "--upgrade","pip"])
+	subprocess.call(["pip", "install", "--upgrade","pip"])
 	try:
 		import bokeh
 		b32.config(bg="lightgreen")
 		b32.config(text ="OK")	
 	except ImportError:
 		subprocess.call([sys.executable, "-m", "pip", "install", "bokeh"])
+		subprocess.call(["pip", "install", "bokeh"])
 
 		
 def mcculww():
 	subprocess.call([sys.executable, "-m", "pip", "install", "--upgrade","pip"])
+	subprocess.call(["pip", "install", "--upgrade","pip"])
 	try:
 		import mcculw
 		b33.config(bg="lightgreen")
 		b33.config(text ="OK")	
 	except ImportError:
-		subprocess.call([sys.executable, "-m", "pip", "install", "mcculw"])			
+		subprocess.call([sys.executable, "-m", "pip", "install", "mcculw"])	
+		subprocess.call(["pip", "install", "mcculw"])			
 
 def scipyy():
 	subprocess.call([sys.executable, "-m", "pip", "install", "--upgrade","pip"])
+	subprocess.call(["pip", "install", "--upgrade","pip"])
 	try:
 		import scipy
 		b34.config(bg="lightgreen")
 		b34.config(text ="OK")	
 	except ImportError:
-		subprocess.call([sys.executable, "-m", "pip", "install", "scipy"])		
+		subprocess.call([sys.executable, "-m", "pip", "install", "scipy"])
+		subprocess.call(["pip", "install", "scipy"])		
 		
 		
 def wxpyt():
 	subprocess.call([sys.executable, "-m", "pip", "install", "--upgrade","pip"])
+	subprocess.call(["pip", "install", "--upgrade","pip"])
 	try:
 		import wx
 		b35.config(bg="lightgreen")
 		b35.config(text ="OK")	
 	except ImportError:
-		subprocess.call([sys.executable, "-m", "pip", "install", "-U","wxPython"])		
+		subprocess.call([sys.executable, "-m", "pip", "install", "-U","wxPython"])
+		subprocess.call(["pip", "install", "-U","wxPython"])		
 		
 		
 b31 = tk.Button(root, text="Numpy", width=8,command=numpyy)
