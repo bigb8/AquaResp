@@ -11,6 +11,8 @@ myp = os.path.dirname(sys.argv[0])
 main_p = myp.split("lib")[0]
 temp_p = main_p + "temp"
 lib_p = main_p + "lib"
+print("Active path: ", myp)
+
 def instrumentoptions():
 	experimenttypeChoices = ["Standard SMR (Flush -> Wait -> Measure)","MMR and then SMR (Wait -> Measure -> Flush)", "delta pO2 flush","Closed respirometry - for teaching"]
 	# experimenttypeChoices = ["Standard SMR (Flush -> Wait -> Measure)","MMR and then SMR (Wait -> Measure -> Flush)", "delta pO2 flush","Adaptive respirometry","Closed respirometry - for teaching"]
