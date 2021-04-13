@@ -33,7 +33,7 @@ If this fails, open the downloaded Python (InstallPython.exe), and make sure to 
 
 #### After Python has been installed
 ##### Double click the CheckLibraries.py in the installation folder.
-This installs the libraries needed to run AquaResp 3.0 ASAP
+Click each button, this will check and install the libraries needed to run AquaResp 3.0 ASAP
 The buttons will change to green and display "OK" when libraries are installed.
 
 
