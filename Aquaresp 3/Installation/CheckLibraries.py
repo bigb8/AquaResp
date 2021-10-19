@@ -1,19 +1,24 @@
 
 #
 import tkinter as tk
-import time 
+import time
 import os,sys,subprocess
 import ctypes
 import shutil
 
 ##
-myp = os.path.dirname(sys.argv[0]) + os.sep
+myp =  os.path.dirname(os.path.realpath(__file__))+os.sep
+main_p = myp.split("Installation")[0]
+temp_p = main_p + "temp"
+lib_p = main_p + "lib"
 ###
 
+shutil.copyfile(myp + os.sep + "dlls" + os.sep + "USBaccess32.dll",myp.split("Installation")[0] +os.sep + "lib" + os.sep+"pump control"+os.sep + "flush.dll")
+# FlushDLL = ctypes.WinDLL(myp + os.sep + "dlls" + os.sep + "USBaccess32.dll")
 
 root = tk.Tk()
 root.title("AquaInstall")
-w1 = tk.Label(root, text="Flush installation control",font='Helvetica 10 bold')
+# w1 = tk.Label(root, text="Flush installation control",font='Helvetica 10 bold')
 
 #Variables for label updating
 v1 = tk.StringVar()
@@ -21,7 +26,7 @@ v2 = tk.StringVar()
 v3 = tk.StringVar()
 
 #Titles, left justification
-i1 = tk.Label(root, text="...",textvariable=v1)
+# i1 = tk.Label(root, text="...",textvariable=v1)
 
 #Buttons
 global clewbit, mccbit
@@ -34,36 +39,36 @@ def bitter32():
 	b12.config(bg="pink")
 	b11.config(bg="lightgreen")
 
-		
+
 def bitter64():
 	global clewbit
 	clewbit = "64"
-		
+
 	b11.config(bg="pink")
 	b12.config(bg="lightgreen")
-	
-	
+
+
 def bittermcc32():
 	global mccbit
 	mccbit = "32"
 	b22.config(bg="pink")
 	b21.config(bg="lightgreen")
 
-		
+
 def bittermcc64():
 	global mccbit
 	mccbit = "64"
-		
+
 	b21.config(bg="pink")
 	b22.config(bg="lightgreen")
 
 
 
-b11 = tk.Button(root, text="32-bit", width=8,command=bitter32)
-b12 = tk.Button(root, text="64-bit", width=8, command=bitter64)
+# b11 = tk.Button(root, text="32-bit", width=8,command=bitter32)
+# b12 = tk.Button(root, text="64-bit", width=8, command=bitter64)
 
-w1.grid(row=0,column=0,sticky="w")
-i1.grid(row=1,columnspan=3,sticky="we")
+# w1.grid(row=0,column=0,sticky="w")
+# i1.grid(row=1,columnspan=3,sticky="we")
 
 #Libraries
 def numpyy():
@@ -71,10 +76,10 @@ def numpyy():
 	subprocess.call(["pip", "install", "--upgrade","pip"])
 	try:
 		import numpy as np
-		b31.config(bg="lightgreen")	
+		b31.config(bg="lightgreen")
 		print("test")
-		b31.config(text ="OK")	
-		
+		b31.config(text ="OK")
+
 	except ImportError:
 		subprocess.call([sys.executable, "-m", "pip", "install", "numpy"])
 		subprocess.call(["pip", "install", "numpy"])
@@ -85,22 +90,22 @@ def bokehh():
 	try:
 		import bokeh
 		b32.config(bg="lightgreen")
-		b32.config(text ="OK")	
+		b32.config(text ="OK")
 	except ImportError:
 		subprocess.call([sys.executable, "-m", "pip", "install", "bokeh"])
 		subprocess.call(["pip", "install", "bokeh"])
 
-		
+
 def mcculww():
 	subprocess.call([sys.executable, "-m", "pip", "install", "--upgrade","pip"])
 	subprocess.call(["pip", "install", "--upgrade","pip"])
 	try:
 		import mcculw
 		b33.config(bg="lightgreen")
-		b33.config(text ="OK")	
+		b33.config(text ="OK")
 	except ImportError:
-		subprocess.call([sys.executable, "-m", "pip", "install", "mcculw"])	
-		subprocess.call(["pip", "install", "mcculw"])			
+		subprocess.call([sys.executable, "-m", "pip", "install", "mcculw"])
+		subprocess.call(["pip", "install", "mcculw"])
 
 def scipyy():
 	subprocess.call([sys.executable, "-m", "pip", "install", "--upgrade","pip"])
@@ -108,24 +113,24 @@ def scipyy():
 	try:
 		import scipy
 		b34.config(bg="lightgreen")
-		b34.config(text ="OK")	
+		b34.config(text ="OK")
 	except ImportError:
 		subprocess.call([sys.executable, "-m", "pip", "install", "scipy"])
-		subprocess.call(["pip", "install", "scipy"])		
-		
-		
+		subprocess.call(["pip", "install", "scipy"])
+
+
 def wxpyt():
 	subprocess.call([sys.executable, "-m", "pip", "install", "--upgrade","pip"])
 	subprocess.call(["pip", "install", "--upgrade","pip"])
 	try:
 		import wx
 		b35.config(bg="lightgreen")
-		b35.config(text ="OK")	
+		b35.config(text ="OK")
 	except ImportError:
 		subprocess.call([sys.executable, "-m", "pip", "install", "-U","wxPython"])
-		subprocess.call(["pip", "install", "-U","wxPython"])		
-		
-		
+		subprocess.call(["pip", "install", "-U","wxPython"])
+
+
 b31 = tk.Button(root, text="Numpy", width=8,command=numpyy)
 b32 = tk.Button(root, text="Bokeh", width=8,command=bokehh)
 b33 = tk.Button(root, text="mcculw", width=8,command=mcculww)
@@ -147,35 +152,23 @@ mccbitold = "0"
 clewbitold = "0"
 
 def dllcheck():
-	global clewbit,mccbit,clewbitold,mccbitold,testpass1,testpass2
-	#Tests	
-	
-	if not clewbit == clewbitold:
-		clewbitold = clewbit
-		try:
-			if clewbit == "32":
-				FlushDLL = ctypes.WinDLL(myp + os.sep + "dlls" + os.sep + "USBaccess32.dll")
-				shutil.copyfile(myp + os.sep + "dlls" + os.sep + "USBaccess32.dll",myp.split("Installation")[0] +os.sep + "lib" + os.sep+"pump control"+os.sep + "flush.dll")
-					
-				
-			elif clewbit == "64":
-				FlushDLL = ctypes.WinDLL(myp + os.sep + "dlls" + os.sep + "USBaccess64.dll")
-				shutil.copyfile(myp + os.sep + "dlls" + os.sep + "USBaccess64.dll",myp.split("Installation")[0] +os.sep + "lib" + os.sep+"pump control"+os.sep + "flush.dll")
-			testpass1 = True
-		except OSError:
-			testpass1 = False
-		
-	
-	if testpass1:
-		v1.set("OK!")
-		i1.config(bg="lightgreen")
-	else:
-		v1.set("Failed")
-		i1.config(bg="pink")
-		
+	testpass1 = False
+	subprocess.Popen(["py","-3", lib_p + os.sep + "Pump.py","1","0","1"])
+	testpass1 = True
 
-	root.after(100, dllcheck)
-	
+
+
+
+	# if testpass1:
+	# 	v1.set("OK!")
+	# 	i1.config(bg="lightgreen")
+	# else:
+	# 	v1.set("Failed")
+	# 	i1.config(bg="pink")
+
+
+	# root.after(100, dllcheck)
+
 
 
 dllcheck()
