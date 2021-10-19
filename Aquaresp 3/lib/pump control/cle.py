@@ -4,7 +4,7 @@ import os,sys
 import time
 myp = os.path.dirname(__file__)
 
-FlushDLL = ctypes.WinDLL(myp + os.sep + "flush.dll")
+FlushDLL = ctypes.WinDLL(myp + os.sep + "USBaccess32.dll")
 
 
 #Ctypes Init - 64bit
