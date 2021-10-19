@@ -1,7 +1,7 @@
 # AquaResp
 Automating Aquatic Respirometry. Focused on automating intermittent respirometry experiments for aquatic animals.
 
-See <a href = "http:\\www.aquaresp.com" target="_blank">aquaresp.com</a> for more information 
+See <a href = "http:\\www.aquaresp.com" target="_blank">aquaresp.com</a> for more information
 
 The GUI and code controlling of the experiment, and the code calculating the results are licensed under Creative Commons BY-SA.
 
@@ -17,7 +17,7 @@ Morten Bo Søndergaard Svendsen, Peter G. Bushnell, & John Fleng Steffensen. (20
 ## Installation
 The present version is only supported on Windows 10 64 bit.
 
-Download Aquaresp by pressing "Clone or Download" button in the top right corner of this screen. 
+Download Aquaresp by pressing "Clone or Download" button in the top right corner of this screen.
 
 ### Windows 10 - 64bit:
 
@@ -40,6 +40,11 @@ The buttons will change to green and display "OK" when libraries are installed.
 ####Further:
 We recommend setting either Mozilla Firefox or Google Chrome webbrowsers as default browser in Windows. The plotting feature does not work in Internet Explorer or Microsoft Edge browsers.
 
+March 5 2021:
+If you are experiencing trouble with running the software after installation. Try running the tool CheckLibraries.py in the Installation folder.
+October 2021:
+For newer win10 updates, run the CheckLibraries as administrator
+
 ---
 If this step is failing, open the command prompt (WinButton + R, write "cmd", and press enter), and run the installation commands for the specific library. The following are needed for AQ3
 
@@ -57,8 +62,6 @@ python -m pip install mcculw
 
 --
 
-March 5 2021:
-If you are experiencing trouble with running the software after installation. Try running the tool CheckLibraries.py in the Installation folder.
 
 #### Step 3 - adding Icons to your desktop
 ##### Run Create Links on Desktop.vbs  (in the Aquaresp 3 main folder)
