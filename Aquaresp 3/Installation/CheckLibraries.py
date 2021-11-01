@@ -64,12 +64,6 @@ def bittermcc64():
 
 
 
-# b11 = tk.Button(root, text="32-bit", width=8,command=bitter32)
-# b12 = tk.Button(root, text="64-bit", width=8, command=bitter64)
-
-# w1.grid(row=0,column=0,sticky="w")
-# i1.grid(row=1,columnspan=3,sticky="we")
-
 #Libraries
 def numpyy():
 	subprocess.call([sys.executable, "-m", "pip", "install", "--upgrade","pip"])
