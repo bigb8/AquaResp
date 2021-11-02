@@ -65,11 +65,12 @@ def ReadFirestingFIRMWARE4():
 			if c == 1: oxtime = oh2time
 			po2s[c] = o2
 			# print(c,o2)
+			# mystamp = datetime.datetime.utcfromtimestamp(oxtime).strftime('%H:%M:%S')
 
 	return po2s[1],po2s[2],po2s[3],po2s[4],oxtime
 
 
-ReadFirestingFIRMWARE4()
+#ReadFirestingFIRMWARE4()
 
 def ReadFiresting(fn):
 	with open(fn,'rb') as f:
