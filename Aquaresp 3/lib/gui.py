@@ -16,7 +16,7 @@ print("Active path: ", myp)
 def instrumentoptions():
 	experimenttypeChoices = ["Standard SMR (Flush -> Wait -> Measure)","MMR and then SMR (Wait -> Measure -> Flush)", "delta pO2 flush","Closed respirometry - for teaching"]
 	# experimenttypeChoices = ["Standard SMR (Flush -> Wait -> Measure)","MMR and then SMR (Wait -> Measure -> Flush)", "delta pO2 flush","Adaptive respirometry","Closed respirometry - for teaching"]
-	o2sensortypeChoices = ["Pyroscience Firesting 4 channel", "Presens Fibox 3"]
+	o2sensortypeChoices = ["Firesting New","Pyroscience Firesting 4 channel (OLD)", "Presens Fibox 3"]
 	# o2sensortypeChoices = ["Pyroscience Firesting 4 channel", "Pyroscience Firesting 3 channel","Pyroscience Firesting 2 channel","Pyroscience Firesting 1 channel","Presens Fibox 3"]
 	typeADChoices = ["Cleware 1","Cleware 4","Measurement Computing 1208LS"]
 	return experimenttypeChoices,o2sensortypeChoices,typeADChoices
