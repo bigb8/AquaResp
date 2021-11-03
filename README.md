@@ -1,6 +1,9 @@
 # AquaResp
 Automating Aquatic Respirometry. Focused on automating intermittent respirometry experiments for aquatic animals.
 
+**Now compatible with the new firmware from PyroScience.** See and use [OxyLog](https://github.com/bigb8/AquaOxyLog)
+
+
 See <a href = "http:\\www.aquaresp.com" target="_blank">aquaresp.com</a> for more information
 
 The GUI and code controlling of the experiment, and the code calculating the results are licensed all licensed under GPL, any figures etc under Creative Commons BY-SA.
@@ -13,6 +16,7 @@ Please cite the code when using the software
 
 Cite as:
 Morten Bo Søndergaard Svendsen, Peter G. Bushnell, & John Fleng Steffensen. (2019, March 5). AquaResp 3 (Version V3.0). Zenodo. http://doi.org/10.5281/zenodo.2584015
+
 
 ## Installation
 The present version is only supported on Windows 10 64 bit.
