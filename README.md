@@ -27,13 +27,16 @@ I have made a quick guide explaining usage of primarily PyroScience sensors in A
 [Online slides](https://docs.google.com/presentation/d/e/2PACX-1vRKApb----Bl-j2ZOM9y0zqdH17NzLXA690NrDP-PSPi9B-Z0NpHatC5fBXWHFSP98ulc9m-8D94u8h/pub?start=false&loop=false&delayms=3000)
 
 ## Installation
-The present version is only supported on Windows 10 64 bit.
 
-Download Aquaresp by pressing "Clone or Download" button in the top right corner of this screen.
+AquaResp is only supported on Windows 10 64 bit.
+
 
 [Illustrated process SLIDES](https://docs.google.com/presentation/d/e/2PACX-1vRuaoCIWaseBiqeIY4hod_YPqSDzq25VY-STTsyQ2NTEkOmtC3Ywm4X5FOzqQxsIN5L8y9L3kfNrERv/pub?start=false&loop=false&delayms=3000)
 
 [PDF - Installation Illustrated](https://github.com/bigb8/AquaResp/raw/master/Installation%20-%20Aquaresp.pdf)
+
+
+Download Aquaresp by pressing "Clone or Download" button in the top right corner of this screen.
 
 ### Windows 10 - 64bit:
 
