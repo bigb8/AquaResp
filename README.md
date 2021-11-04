@@ -93,3 +93,5 @@ Thank you to <a href = "https://www.researchgate.net/profile/Denis_Chabot">Denis
 Thank you to <a href = "https://www.researchgate.net/profile/Heidrikur_Bergsson3">Heiðrikur Bergsson</a> for testing and using AquaResp.
 
 Thank you to <a href = "http://saltnfish.dk/cv/">Emil Aputsiaq Christensen</a> for providing valuable usability input.
+
+Thank you to [Lars Emil Juel Andersen](https://www.researchgate.net/profile/Lars-Emil-Juel-Andersen) for being exeptionally fast in trying new AquaResp versions and letting me know of any bugs.
