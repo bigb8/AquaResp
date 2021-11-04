@@ -31,6 +31,10 @@ The present version is only supported on Windows 10 64 bit.
 
 Download Aquaresp by pressing "Clone or Download" button in the top right corner of this screen.
 
+[Illustrated process SLIDES](https://docs.google.com/presentation/d/e/2PACX-1vRuaoCIWaseBiqeIY4hod_YPqSDzq25VY-STTsyQ2NTEkOmtC3Ywm4X5FOzqQxsIN5L8y9L3kfNrERv/pub?start=false&loop=false&delayms=3000)
+
+[PDF - Installation Illustrated](https://github.com/bigb8/AquaResp/raw/master/Installation%20-%20Aquaresp.pdf)
+
 ### Windows 10 - 64bit:
 
 #### Step 1 - downloading Python
