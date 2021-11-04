@@ -13,12 +13,8 @@ temp_p = main_p + "temp"
 lib_p = main_p + "lib"
 ###
 
-shutil.copyfile(myp + os.sep + "dlls" + os.sep + "USBaccess32.dll",myp.split("Installation")[0] +os.sep + "lib" + os.sep+"pump control"+os.sep + "flush.dll")
-# FlushDLL = ctypes.WinDLL(myp + os.sep + "dlls" + os.sep + "USBaccess32.dll")
-
 root = tk.Tk()
 root.title("AquaInstall")
-# w1 = tk.Label(root, text="Flush installation control",font='Helvetica 10 bold')
 
 #Variables for label updating
 v1 = tk.StringVar()
@@ -32,6 +28,8 @@ v3 = tk.StringVar()
 global clewbit, mccbit
 clewbit = "64"
 mccbit = "64"
+
+subprocess.call(["pip", "install", "--upgrade","pip"])
 
 def bitter32():
 	global clewbit
@@ -67,7 +65,7 @@ def bittermcc64():
 #Libraries
 def numpyy():
 	subprocess.call([sys.executable, "-m", "pip", "install", "--upgrade","pip"])
-	subprocess.call(["pip", "install", "--upgrade","pip"])
+	# subprocess.call(["pip", "install", "--upgrade","pip"])
 	try:
 		import numpy as np
 		b31.config(bg="lightgreen")
@@ -80,7 +78,7 @@ def numpyy():
 
 def bokehh():
 	subprocess.call([sys.executable, "-m", "pip", "install", "--upgrade","pip"])
-	subprocess.call(["pip", "install", "--upgrade","pip"])
+	# subprocess.call(["pip", "install", "--upgrade","pip"])
 	try:
 		import bokeh
 		b32.config(bg="lightgreen")
@@ -91,8 +89,8 @@ def bokehh():
 
 
 def mcculww():
-	subprocess.call([sys.executable, "-m", "pip", "install", "--upgrade","pip"])
-	subprocess.call(["pip", "install", "--upgrade","pip"])
+	# subprocess.call([sys.executable, "-m", "pip", "install", "--upgrade","pip"])
+
 	try:
 		import mcculw
 		b33.config(bg="lightgreen")
@@ -103,7 +101,7 @@ def mcculww():
 
 def scipyy():
 	subprocess.call([sys.executable, "-m", "pip", "install", "--upgrade","pip"])
-	subprocess.call(["pip", "install", "--upgrade","pip"])
+	# subprocess.call(["pip", "install", "--upgrade","pip"])
 	try:
 		import scipy
 		b34.config(bg="lightgreen")
@@ -115,7 +113,7 @@ def scipyy():
 
 def wxpyt():
 	subprocess.call([sys.executable, "-m", "pip", "install", "--upgrade","pip"])
-	subprocess.call(["pip", "install", "--upgrade","pip"])
+	# subprocess.call(["pip", "install", "--upgrade","pip"])
 	try:
 		import wx
 		b35.config(bg="lightgreen")
@@ -140,8 +138,6 @@ b33.grid(row = 9,columnspan=4,sticky="we")
 b34.grid(row = 10,columnspan=4,sticky="we")
 b35.grid(row = 11,columnspan=4,sticky="we")
 
-# FlushDLL = ctypes.WinDLL(myp + os.sep + "dlls" + os.sep + "cbw32.dll")
-
 mccbitold = "0"
 clewbitold = "0"
 
@@ -149,20 +145,6 @@ def dllcheck():
 	testpass1 = False
 	subprocess.Popen(["py","-3", lib_p + os.sep + "Pump.py","1","0","1"])
 	testpass1 = True
-
-
-
-
-	# if testpass1:
-	# 	v1.set("OK!")
-	# 	i1.config(bg="lightgreen")
-	# else:
-	# 	v1.set("Failed")
-	# 	i1.config(bg="pink")
-
-
-	# root.after(100, dllcheck)
-
 
 
 dllcheck()
