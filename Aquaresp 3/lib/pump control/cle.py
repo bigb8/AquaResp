@@ -5,9 +5,9 @@ import time
 myp = os.path.dirname(__file__)
 
 try:
-    FlushDLL = ctypes.WinDLL(myp + os.sep + "USBaccess32.dll")
-except:
     FlushDLL = ctypes.WinDLL(myp + os.sep + "USBaccess.dll")
+except:
+    FlushDLL = ctypes.WinDLL(myp + os.sep + "USBaccess32.dll")
 
 
 #Ctypes Init - 64bit
