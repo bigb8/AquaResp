@@ -1,7 +1,7 @@
 # AquaResp
 Automating Aquatic Respirometry. Focused on automating intermittent respirometry experiments for aquatic animals.
 
-**Now compatible with the new firmware from PyroScience.** See and use [OxyLog](https://github.com/bigb8/AquaOxyLog)
+**Now compatible with the new firmware from PyroScience - those using WorkBench** See and use [OxyLog](https://github.com/bigb8/AquaOxyLog)
 
 The GUI and code controlling of the experiment, and the code calculating the results are licensed all licensed under GPL, any figures etc under Creative Commons BY-SA.
 
