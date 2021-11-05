@@ -15,16 +15,17 @@ Cite as:
 Morten Bo Søndergaard Svendsen, Peter G. Bushnell, & John Fleng Steffensen. (2019, March 5). AquaResp 3 (Version V3.0). Zenodo. http://doi.org/10.5281/zenodo.2584015
 
 
-## Oxygen sensor communication
+## Oxygen meter communication
 
 The fundamental idea is that external software logs to a the oxygen folder, where Aquaresp then can read the data.
 
-I have made a quick guide explaining usage of primarily PyroScience sensors in AquaResp. The approach for Firesting firmware <4, is the same for fibox - presens.
+I have made a quick guide explaining usage of primarily PyroScience meters in AquaResp. The approach for Firesting firmware <4, is the same for fibox - presens.
 
 
 [PDF](https://github.com/bigb8/AquaResp/blob/master/Oxygen%20sensors%20in%20AquaResp.pdf)
 
 [Online slides](https://docs.google.com/presentation/d/e/2PACX-1vRKApb----Bl-j2ZOM9y0zqdH17NzLXA690NrDP-PSPi9B-Z0NpHatC5fBXWHFSP98ulc9m-8D94u8h/pub?start=false&loop=false&delayms=3000)
+
 
 ## Installation
 
