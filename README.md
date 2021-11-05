@@ -62,8 +62,13 @@ We recommend setting either Mozilla Firefox or Google Chrome webbrowsers as defa
 
 March 5 2021:
 If you are experiencing trouble with running the software after installation. Try running the tool CheckLibraries.py in the Installation folder.
+
 October 2021:
 For newer win10 updates, run the CheckLibraries as administrator
+
+
+November 2021:
+Version 3.01. Compatibility with PyroScience WorkBench.  
 
 ---
 If this step is failing, open the command prompt (WinButton + R, write "cmd", and press enter), and run the installation commands for the specific library. The following are needed for AQ3
